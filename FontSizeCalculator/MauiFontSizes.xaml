@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FontSizeCalculator.MauiFontSizes">
+             x:Class="FontSizeCalculator.MauiFontSizes"
+             Title="MAUI Text Sizes">
     <ContentPage.Content>
-        
+        <ScrollView>
+            <VerticalStackLayout Spacing="10" Padding="20">
+                <Label Text="Default" FontSize="Default" />
+                <Label Text="Micro" FontSize="Micro" />
+                <Label Text="Small" FontSize="Small" />
+                <Label Text="Medium" FontSize="Medium" />
+                <Label Text="Large" FontSize="Large" />
+                <Label Text="Body" FontSize="Body" />
+                <Label Text="Header" FontSize="Header" />
+                <Label Text="Title" FontSize="Title" />
+                <Label Text="Subtitle" FontSize="Subtitle" />
+                <Label Text="Caption" FontSize="Caption" />
+            </VerticalStackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

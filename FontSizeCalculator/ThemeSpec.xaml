@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FontSizeCalculator.ThemeSpec">
+             x:Class="FontSizeCalculator.ThemeSpec"
+             Title="SM Theme Text Sizes">
     <ContentPage.Content>
-        
+        <ScrollView>
+            <VerticalStackLayout x:Name="Layout" Padding="30,0" Spacing="16">
+                
+                <!-- Font Family Selector -->
+                <Picker x:Name="FontFamilyPicker"
+                        Title="Select Font Family">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>AvenirNextWorld</x:String>
+                            <x:String>BogueSlab</x:String>
+                            <x:String>Elante</x:String>
+                            <x:String>FrutigerNeueLTPro</x:String>
+                            <x:String>KlintPro</x:String>
+                            <x:String>NeueHaasUnicaPro</x:String>
+                            <x:String>NotoSans</x:String>
+                            <x:String>OpenSans</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                
+                <!-- Type selector -->
+                <Picker x:Name="TextTypePicker"
+                        Title="Select Text Type">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Paragraph</x:String>
+                            <x:String>List</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Alignment selector -->
+                <Picker x:Name="AlignmentPicker"
+                        Title="Select Alignment">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>start</x:String>
+                            <x:String>center</x:String>
+                            <x:String>end</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Style toggles -->
+                <HorizontalStackLayout Spacing="12">
+                    <Switch x:Name="BoldSwitch" />
+                    <Label Text="Bold" VerticalTextAlignment="Center" />
+                    <Switch x:Name="ItalicSwitch" />
+                    <Label Text="Italic" VerticalTextAlignment="Center" />
+                    <Switch x:Name="StrikeSwitch" />
+                    <Label Text="Strike" VerticalTextAlignment="Center" />
+                </HorizontalStackLayout>
+                
+                <!-- Labels updated in place -->
+                <VerticalStackLayout Spacing="12">
+                    <!-- Heading -->
+                    <Label
+                        x:Name="HeadingLabel"
+                        Text="Heading"/>
+                    
+                    <!-- Quote  -->
+                    <Label 
+                        x:Name="QuoteLabel"
+                        Text="Quote"/>
+                    <!-- Attribution -->
+                    <Label
+                        x:Name="AttributionLabel"
+                        Text="Attribution"
+                        TextColor="#666" />
+                    <Label 
+                        x:Name="Largest" 
+                        Text="Largest (xxlarge)"
+                        FontFamily="AvenirNextWorld-Regular"/>
+                    <Label 
+                        x:Name="ExtraLarge" 
+                        Text="Extra Large (xlarge)"
+                        FontFamily="AvenirNextWorld-Regular"/>
+                    <Label 
+                        x:Name="Large" 
+                        Text="Large (large)"
+                        FontFamily="AvenirNextWorld-Regular"/>
+                    <Label 
+                        x:Name="Medium" 
+                        Text="Medium (medium)"
+                        FontFamily="AvenirNextWorld-Regular"/>
+                    <Label 
+                        x:Name="Small"
+                        Text="Small (small)"
+                        FontFamily="AvenirNextWorld-Regular"/>
+                </VerticalStackLayout>           
+                
+            </VerticalStackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

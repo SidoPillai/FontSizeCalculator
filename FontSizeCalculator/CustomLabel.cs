@@ -1,6 +1,8 @@
 namespace FontSizeCalculator;
 
-public class CustomLabel
+public class CustomLabel : Label
 {
-    
+    public CustomLabel()
+    {
+    }
 }

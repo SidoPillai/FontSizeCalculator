@@ -1,21 +1,15 @@
-namespace FontSizeCalculator;
+namespace FontSizeCalculator.Typography;
 
-public sealed class TextConfig(string fontFamily, TextType type, TextSize size, TextAlignment alignment, InlineStyle styles, IReadOnlyList<string>? contentItems)
+public sealed class TextConfig(
+    TextRole role,
+    TextSize size,
+    string fontFamily,
+    TextAlignment alignment,
+    InlineStyle styles)
 {
     public string FontFamily { get; } = fontFamily;
-    public TextType Type { get; } = type;
-
-    public TextRole Role => Type switch
-    {
-        TextType.Paragraph => TextRole.Paragraph,
-        TextType.Heading => TextRole.Heading,
-        TextType.BulletList => TextRole.BulletList,
-        TextType.NumberedList => TextRole.NumberedList,
-        TextType.Quote => TextRole.Quote,
-        _ => TextRole.QuoteAttribution
-    };
+    public TextRole Role { get; } = role;
     public TextSize Size { get; } = size;
     public TextAlignment Alignment { get; } = alignment;
     public InlineStyle Styles { get; } = styles;
-    public IReadOnlyList<string> ContentItems { get; } = contentItems ?? Array.Empty<string>();
 }

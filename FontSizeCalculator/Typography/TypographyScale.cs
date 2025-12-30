@@ -1,4 +1,4 @@
-namespace FontSizeCalculator;
+namespace FontSizeCalculator.Typography;
 
 // FontSize = DeviceBase × RoleMultiplier × min(widthFit, heightFit) × Accessibility
 public static class TypographyScale
@@ -98,7 +98,7 @@ public static class TypographyScale
         var baseSize = 44;
         if (idiom == DeviceIdiom.Phone)
         {
-            baseSize = 18;
+            baseSize = 24;
         }
         else if (idiom == DeviceIdiom.Tablet)
         {
@@ -114,11 +114,11 @@ public static class TypographyScale
         var baseSize = 25;
         if (idiom == DeviceIdiom.Phone)
         {
-            baseSize = 12;
+            baseSize = 20;
         }
         else if (idiom == DeviceIdiom.Tablet)
         {
-            baseSize = 21;
+            baseSize = 24;
         }
         
         return baseSize;
@@ -130,11 +130,11 @@ public static class TypographyScale
         var baseSize = 21;
         if (idiom == DeviceIdiom.Phone)
         {
-            baseSize = 18;
+            baseSize = 16;
         }
         else if (idiom == DeviceIdiom.Tablet)
         {
-            baseSize = 10;
+            baseSize = 18;
         }
         
         return baseSize;

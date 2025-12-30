@@ -5,10 +5,23 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:FontSizeCalculator"
     Title="FontSizeCalculator">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    
+    <TabBar
+        Title="Font Size Calculator"
+        FlyoutDisplayOptions="AsMultipleItems">
+        <!-- <Tab -->
+        <!--     Title="Native Texts"> -->
+        <!--     <ShellContent ContentTemplate="{DataTemplate local:NativeFontSize}"/> -->
+        <!-- </Tab> -->
+        <!-- <Tab Title="Maui Texts"> -->
+        <!--     <ShellContent ContentTemplate="{DataTemplate local:MauiFontSizes}" /> -->
+        <!-- </Tab> -->
+        <Tab Title="SM Theme">
+            <ShellContent ContentTemplate="{DataTemplate local:ThemeSpec}" />
+        </Tab>
+        <Tab Title="SM App">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+    </TabBar>
 
 </Shell>

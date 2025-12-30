@@ -1,4 +1,4 @@
-namespace FontSizeCalculator;
+namespace FontSizeCalculator.Typography;
 
 public static class LineHeightManager
 {
